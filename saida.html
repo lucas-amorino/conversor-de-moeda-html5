@@ -23,6 +23,7 @@
 				var sResponseBody = oResponse.responseText;
 				var oJSON = JSON.parse(sResponseBody);
 				var sReais = oJSON.rates.BRL;
+				document.querySelector("#valor_destino").value = sReais
 				console.log(sReais);
 			}
 			
@@ -55,7 +56,7 @@
         <input type="text" value="BRL" disabled>
         <br />
         <label>Valor de destino</label>
-        <input type="number" disabled >
+        <input id="valor_destino" type="number" disabled >
         
         <br />
 		<button type="button" onclick="voltar()">
